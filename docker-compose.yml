@@ -1,0 +1,8 @@
+version: '3'
+services:
+  sieve_ir:
+    container_name: SieveIR
+    platform: linux/amd64
+    build: ./
+    volumes:
+      - ./:/code
