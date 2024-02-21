@@ -24,4 +24,10 @@ COPY . .
 
 RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
 
+RUN python3 -m pip install --upgrade pip setuptools
+
+RUN git clone https://github.com/uvm-plaid/picozk.git
+
+RUN pip3 install picozk/.
+
 CMD [ "sleep", "infinity" ]
