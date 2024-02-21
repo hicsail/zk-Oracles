@@ -1,9 +1,0 @@
-[submodule "src/zk-applepsi"]
-	path = src/zk-applepsi
-	url = https://github.com/hicsail/zk-applepsi.git
-[submodule "src/zk-DP"]
-	path = src/zk-DP
-	url = https://github.com/hicsail/zk-DP.git
-[submodule "src/zk-copyright"]
-	path = src/zk-copyright
-	url = https://github.com/hicsail/zk-copyright.git
