@@ -22,6 +22,8 @@ RUN apt update && apt install -y\
 
 COPY . .
 
+RUN git submodule update --init --recursive
+
 RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
 
 CMD [ "sleep", "infinity" ]
