@@ -1,8 +1,22 @@
 version: '3'
 services:
-  sieve_ir:
-    container_name: SieveIR
+  zk-applepsi:
     platform: linux/amd64
-    build: ./
+    container_name: zk-applepsi
+    image: hicsail/zk-applepsi:main
     volumes:
-      - ./:/code
+      - ./src/zk-applepsi:/code/zk-applepsi
+
+  zk-copyright:
+    platform: linux/amd64
+    container_name: zk-copyright
+    image: hicsail/zk-copyright:main
+    volumes:
+      - ./src/zk-copyright:/code/zk-copyright
+
+  zk-dp:
+    platform: linux/amd64
+    container_name: zk-dp
+    image: hicsail/zk-dp:main
+    volumes:
+      - ./src/zk-DP:/code/zk-DP
