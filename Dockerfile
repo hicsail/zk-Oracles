@@ -30,6 +30,6 @@ RUN git clone https://github.com/uvm-plaid/picozk.git
 
 RUN pip3 install picozk/.
 
-RUN mkdir /irs
+RUN mkdir -p /usr/src/app/irs
 
 CMD [ "sleep", "infinity" ]
