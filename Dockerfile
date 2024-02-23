@@ -18,7 +18,14 @@ RUN apt update && apt install -y\
     unzip\
     uuid-dev\
     default-jdk\
+    curl\
     && apt upgrade -y
+
+# Install Docker CLI for Docker-outside-of-Docker (DooD) approach
+RUN curl -fsSL https://get.docker.com -o get-docker.sh && \
+    sh get-docker.sh && \
+    apt install -y docker-ce-cli && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY . .
 
@@ -30,6 +37,8 @@ RUN git clone https://github.com/uvm-plaid/picozk.git
 
 RUN pip3 install picozk/.
 
-RUN mkdir -p /usr/src/app/irs
+RUN mkdir -p irs
 
-CMD [ "sleep", "infinity" ]
+RUN chmod +x run_containers.sh
+
+ENTRYPOINT ["/usr/src/app/run_containers.sh"]
