@@ -34,10 +34,10 @@ RUN pip3 install picozk/.
 RUN mkdir -p irs
 
 # Install Docker CLI for Docker-outside-of-Docker (DooD) approach
-RUN curl -fsSL https://get.docker.com -o get-docker.sh && \
-    sh get-docker.sh && \
-    apt install -y docker-ce-cli && \
-    rm -rf /var/lib/apt/lists/*
+# RUN curl -fsSL https://get.docker.com -o get-docker.sh && \
+#     sh get-docker.sh && \
+#     apt install -y docker-ce-cli && \
+#     rm -rf /var/lib/apt/lists/*
 
-RUN chmod +x run_containers.sh
-ENTRYPOINT ["/usr/src/app/run_containers.sh"]
+# RUN chmod +x run_containers.sh
+# ENTRYPOINT ["/usr/src/app/run_containers.sh"]
