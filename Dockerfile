@@ -21,12 +21,6 @@ RUN apt update && apt install -y\
     curl\
     && apt upgrade -y
 
-# Install Docker CLI for Docker-outside-of-Docker (DooD) approach
-RUN curl -fsSL https://get.docker.com -o get-docker.sh && \
-    sh get-docker.sh && \
-    apt install -y docker-ce-cli && \
-    rm -rf /var/lib/apt/lists/*
-
 COPY . .
 
 RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
@@ -39,6 +33,11 @@ RUN pip3 install picozk/.
 
 RUN mkdir -p irs
 
-RUN chmod +x run_containers.sh
+# Install Docker CLI for Docker-outside-of-Docker (DooD) approach
+RUN curl -fsSL https://get.docker.com -o get-docker.sh && \
+    sh get-docker.sh && \
+    apt install -y docker-ce-cli && \
+    rm -rf /var/lib/apt/lists/*
 
+RUN chmod +x run_containers.sh
 ENTRYPOINT ["/usr/src/app/run_containers.sh"]
