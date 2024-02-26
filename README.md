@@ -31,6 +31,12 @@ docker run --platform linux/amd64 -it hicsail/zk-dp:main
 ### 🛠 Running All Images Simultaneously
 If you prefer to launch all Docker images at once, you can use docker-compose with the following command:
 
+Clone the repo:
+```
+git clone https://github.com/hicsail/SieveIR.git
+```
+
+Docker Compose:
 ```
 docker-compose up -d --build
 ```
