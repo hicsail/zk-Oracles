@@ -1,6 +1,6 @@
-# SieveIR
+# zk-Oracles
 
-Welcome to the SieveIR repository, a project supported by DARPA focused on zero-knowledge-proof technology within the SIEVE IR0+ framework. 
+Welcome to the zk-Oracles repository, a project supported by DARPA focused on zero-knowledge-proof technology within the SIEVE IR0+ framework. 
 
 This repository is a collection of four key modules, each designed to implement possible applications of Zero-Knowledge Proofs in various domains.
 
@@ -33,7 +33,7 @@ If you prefer to launch all Docker images at once, you can use docker-compose wi
 
 Clone the repo:
 ```
-git clone https://github.com/hicsail/SieveIR.git
+git clone https://github.com/hicsail/zk-Oracles.git
 ```
 
 Docker Compose:
