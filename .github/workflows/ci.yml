@@ -28,7 +28,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            hicsail/sieveir
+            hicsail/zk-oracles
           tags: |
             type=ref,event=branch
             type=semver,pattern={{version}}
