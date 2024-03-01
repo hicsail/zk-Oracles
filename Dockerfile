@@ -1,11 +1,8 @@
-FROM ubuntu:latest
+FROM pypy:latest
 WORKDIR /usr/src/app
 
 RUN apt update && apt install -y\
     build-essential\
-    pypy3 \
-    pypy3-dev\
-    pypy3-pip\
     git \
     cmake\
     make\
