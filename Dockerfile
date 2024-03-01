@@ -23,7 +23,7 @@ RUN apt update && apt install -y\
 
 COPY . .
 
-RUN pypy3 -m pip install --no-cache-dir --upgrade -r requirements.txt
+RUN pypy3 -m pip install --upgrade -r requirements.txt
 
 RUN pypy3 -m pip install --upgrade pip setuptools
 
