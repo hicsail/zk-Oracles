@@ -23,9 +23,9 @@ RUN apt update && apt install -y\
 
 COPY . .
 
-RUN pypy3 -m pip install --upgrade -r requirements.txt
-
 RUN pypy3 -m pip install --upgrade pip setuptools
+
+RUN pypy3 -m pip install -r requirements.txt
 
 RUN git clone https://github.com/uvm-plaid/picozk.git
 
