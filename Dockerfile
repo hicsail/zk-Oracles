@@ -3,10 +3,9 @@ WORKDIR /usr/src/app
 
 RUN apt update && apt install -y\
     build-essential\
-    python3 \
-    python3-pip\
-    python3-dev\
-    python3-numpy\
+    pypy3 \
+    pypy3-dev\
+    pypy3-pip\
     git \
     cmake\
     make\
@@ -23,12 +22,14 @@ RUN apt update && apt install -y\
 
 COPY . .
 
-RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
+RUN pypy3 -m pip install --no-cache-dir --upgrade -r requirements.txt
 
-RUN python3 -m pip install --upgrade pip setuptools
+RUN pypy3 -m pip install --upgrade pip setuptools
 
 RUN git clone https://github.com/uvm-plaid/picozk.git
 
-RUN pip3 install picozk/.
+RUN cp ./consts/poseidon_hash.py ./picozk/picozk/poseidon_hash/poseidon_hash.py
+
+RUN pypy3 -m pip install picozk/.
 
 RUN mkdir -p irs
