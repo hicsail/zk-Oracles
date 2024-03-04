@@ -17,5 +17,4 @@ tzdata==2024.1
 faker
 ecdsa
 black
-galois
 nistbeacon
