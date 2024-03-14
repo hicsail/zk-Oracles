@@ -1,6 +1,6 @@
 # zk-Oracles
 
-Welcome to the zk-Oracles repository, a project supported by DARPA focused on zero-knowledge-proof technology within the SIEVE IR0+ framework. 
+Welcome to the zk-Oracles repository, a project supported by DARPA focused on zero-knowledge-proof technology within <a href="https://github.com/sieve-zk/ir"> the SIEVE IR0+ framework</a>. 
 
 This repository is a collection of four key modules, each designed to implement possible applications of Zero-Knowledge Proofs in various domains.
 
