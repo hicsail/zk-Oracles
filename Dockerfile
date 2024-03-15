@@ -29,7 +29,7 @@ RUN pypy3 -m pip install -r requirements.txt
 
 RUN git clone https://github.com/uvm-plaid/picozk.git
 
-RUN cd picozk && git checkout 3d9acce46c6f211f59828c4f27ecd303466fc2ea
+RUN cd picozk && git checkout c56a2729d0996b1c6dd0a1d6e6455f5cbcc08c09
 
 RUN cp ./consts/poseidon_hash.py ./picozk/picozk/poseidon_hash/poseidon_hash.py
 
