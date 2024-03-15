@@ -23,7 +23,7 @@ To get each Docker image up and running, execute the following commands in your 
 
 ```
 docker run --platform linux/amd64 -it hicsail/zk-nlp:main      
-docker run --platform linux/amd64 -it hicsail/zk-apple-psi:main
+docker run --platform linux/amd64 -it hicsail/zk-applepsi:main
 docker run --platform linux/amd64 -it hicsail/zk-copyright:main
 docker run --platform linux/amd64 -it hicsail/zk-dp:main
 ```
